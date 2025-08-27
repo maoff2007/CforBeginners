@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+/*goto……loop语句
+main(){
+	int i,s=0;
+	i=1;
+	loop: if (i<=100){
+		s=s+i;
+		i=i+1;
+		goto loop;
+	}
+	printf("%d",s);
+}*/
+
+/*while语句
+main(){
+	int sum=0;
+	int i=1;
+	while (i<=100){
+		sum=sum+i;
+		i=i+1;
+	}
+	printf("%d",sum);
+}*/
+
+/*while语句
+main(){
+	int i, sum=0;
+    for(i=1; i<=100; i++){   //for(初始化表达式;条件表达式;更新表达式)
+        sum+=i;
+    }
+    printf("%d",sum);
+}*/
+
+//do……while语句
+main(){
+	int i,sum1;
+	i=1;
+	sum1=0;
+	do{               //不管怎么样都会先执行一次，适用于需要执行至少一次的情况
+		sum1+=i;
+		i++;
+	}while (i<=100);
+	printf("%d",sum1);
+	
+}

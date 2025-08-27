@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+main(){
+	int i,x;
+	int a[10]={0,1,2,3,4,5,6,7,8,9};
+	scanf("%d", &x);
+	for (i=0; i<10; i++)
+		if (x==a[i]){
+			printf("find!");
+			break;
+		} 
+	if(i==10)   //for循环完整执行完所有10次迭代，结束时i会变成10，即没找到匹配的
+		printf("not find!");
+}
+
+//for，if等等，如果后面只有一个语句块，可以不加{}，好习惯还是加上

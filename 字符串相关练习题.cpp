@@ -1,0 +1,27 @@
+////统计输入的字符串中有几个英文字母
+//#include <stdio.h>
+//main(){
+//	char string[100], c;
+//	gets(string);
+//	
+//	int i, num=0;
+//	for (i=0; (c=string[i])!='\0'; i++){
+//		if ((c=string[i])!=' '){
+//			num=num+1;
+//		}else{
+//			continue;
+//		}	
+//	}
+//	printf("%d",num);
+//}
+
+#include <stdio.h>
+main(){
+	int a=2, b=-1, c=2;
+	if(a<b)
+		if(b<0)
+			c=0;
+	else
+			c++;   //else总是与最近的未匹配的if配对
+	printf("%d",c);
+}

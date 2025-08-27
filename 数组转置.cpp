@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+main(){
+	int a[3][4], b[4][3], i, j;
+	for (i=0; i<3; i++) {
+		for (j=0; j<4; j++) {
+			scanf("%d", &a[i][j]);
+		}
+	}
+	
+	for (i=0; i<4; i++) {
+		for (j=0; j<3; j++) {
+			b[i][j]=a[j][i];
+			printf("%d ",b[i][j]);
+		}
+		printf("\n");
+	}
+}

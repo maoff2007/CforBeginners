@@ -1,0 +1,22 @@
+#include<stdio.h>
+
+/*add 函数计算x，y的和*/
+int add(int x, int y)
+{
+	int z;
+	z=x+y;
+	return(z);
+}
+
+/*主函数*/
+int main()
+{
+	int a,b,sum;
+	a=10;
+	b=24;
+	sum=add(a,b);
+	printf("sum= %d\n",sum);
+}
+
+//为什么main那一大段放在add那段前面就是错的，具体什么意思（7/25）
+//大概是要先声明/定义好add这个函数（8/14）
