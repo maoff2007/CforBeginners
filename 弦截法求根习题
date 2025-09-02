@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <math.h>
+
+float func_x(float x) {
+	return(2 * x * x * x - 4 * x * x + 3 * x - 6);
+}
+
+float func_root(float x1, float x2) {
+	return((func_x(x1) * x2 - func_x(x2) * x1) / (func_x(x1) - func_x(x2)));
+}
+
+int main() {
+	float x1, x2, y1, y2, x, y;
+	scanf("%f %f", &x1, &x2);
+	while ((x1 <= -20) || (x1 >= 20) || (x2 <= -20) || (x2 >= 20) || (func_x(x1) * func_x(x2) >= 0)){
+		printf("please input again: ");
+		scanf("%f %f", &x1, &x2);
+		continue;
+	}
+
+	y1 = func_x(x1);
+	do {
+		x = func_root(x1, x2);
+		y = func_x(x);
+		if (y1 * y > 0) {
+			x1 = x;
+			y1 = y;   //这句y1必须要有，因为下一次条件判断力要用到新的y1
+		}
+		else {
+			x2 = x;
+			//y2 = y;   //而这句非必要，因为条件判断不用，而若要再进来，会在前面计算时更新
+		}
+	} while (fabs(y) >= 1e-6);
+
+	printf("the solution is: %.3f", x);
+}
