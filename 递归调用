@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int age(int n) {
+    if (n <= 0) return 0;      // 处理非法输入
+    if (n == 1) return 10;     // 第一个人10岁
+    return age(n - 1) + 2;     // 每个人比前一个人大2岁
+}
+
+int main() {
+    int num;
+    
+    printf("请输入第几个人: ");
+    scanf("%d", &num);
+    
+    printf("第%d个人的年龄是%d岁\n", num, age(num));
+    
+    return 0;
+}
+
+//没有灵魂的dpsk版本，anyway不想再写一遍了就这个意思就这样吧。
