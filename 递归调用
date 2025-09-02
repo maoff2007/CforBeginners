@@ -5,6 +5,7 @@ int age(int n) {
     if (n == 1) return 10;     // 第一个人10岁
     return age(n - 1) + 2;     // 每个人比前一个人大2岁
 }
+//return后面只能接与函数返回类型匹配的表达式（如此处必须是数字）
 
 int main() {
     int num;
