@@ -1,0 +1,32 @@
+//#include <stdio.h>
+//
+//void swap2(int x, int y) {
+//	int z;
+//	z = x;
+//	x = y;
+//	y = z;
+//}
+//
+//int main() {
+//	int a[2] = { 1,2 };
+//	swap2(a[0], a[1]);
+//	printf("a[0]=%d, a[1]=%d", a[0], a[1]);
+//}
+
+//C语言是值传递：函数参数传递的是值的副本，不是原始变量
+//要修改原始数据：必须传递变量的地址（指针）,其实质是实参数组和形参数组共享同一段内存单元
+
+#include <stdio.h>
+
+void swap2(int x[]) {
+	int z;
+	z = x[0];
+	x[0] = x[1];
+	x[1] = z;
+}
+
+int main() {
+	int a[2] = { 1,2 };
+	swap2(a);
+	printf("a[0]=%d, a[1]=%d", a[0], a[1]);
+}
